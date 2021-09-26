@@ -2,7 +2,7 @@
 ## Files description
 ContactCell.swift - class for init custom cell.<br /><br />
 ContactVC.swift - main view controller class with tableview,search controller and 2 buttons to navigate. <br /><br />
-ProfilveVC.swift - second view controller when user can add new contact or edit exciting<br /><br />
+ProfilveVC.swift - second view controller when user can add new contact or edit already existing<br /><br />
 Person.swift - struct for store contact properties<br /><br />
 IsFavoriteEnum.swift - enum for definition of "favorite" status <br /><br />
 Validation.swift - class for validate inputed information from user<br /><br />
