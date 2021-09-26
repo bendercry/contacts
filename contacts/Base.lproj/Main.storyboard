@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5se-Sz-NyA" userLabel="Fields Stack View">
-                                <rect key="frame" x="40" y="262" width="334" height="284"/>
+                                <rect key="frame" x="40" y="261.5" width="334" height="285"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMw-Qy-tSd">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="35"/>
@@ -99,12 +99,15 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Second Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0jT-Js-AKU">
-                                        <rect key="frame" x="0.0" y="50" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="50" width="334" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Ihs-eN-NNh"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-xD-zJY" customClass="AKMaskField" customModule="AKMaskField">
-                                        <rect key="frame" x="0.0" y="99" width="334" height="35"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+7 (___) ___-__-__" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QbK-xD-zJY" customClass="AKMaskField" customModule="AKMaskField">
+                                        <rect key="frame" x="0.0" y="100" width="334" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="NlB-3M-QS4"/>
                                         </constraints>
@@ -112,27 +115,31 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="maskExpression" value="+7 ({ddd}) {ddd}-{dd}-{dd}"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="maskTemplate" value="+38 (___) ___-__-__"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskTemplate" value="+7 (___) ___-__-__"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H93-if-XIb">
-                                        <rect key="frame" x="0.0" y="149" width="334" height="35"/>
+                                        <rect key="frame" x="0.0" y="150" width="334" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="XbV-7V-ZXG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday date " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-RE-0yy">
-                                        <rect key="frame" x="0.0" y="199" width="334" height="35"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday date " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ic-RE-0yy" customClass="AKMaskField" customModule="AKMaskField">
+                                        <rect key="frame" x="0.0" y="200" width="334" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="kfU-QT-whn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskExpression" value="{dd}/{dd}/{dddd}"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskTemplate" value="&quot;dd&quot;/&quot;MM&quot;/&quot;YYYY&quot;"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-nf-Pfk">
-                                        <rect key="frame" x="0.0" y="249" width="334" height="35"/>
+                                        <rect key="frame" x="0.0" y="250" width="334" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="t6e-YT-b5c"/>
                                         </constraints>

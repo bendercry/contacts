@@ -50,10 +50,10 @@
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		789BEF5728B2F2C52751D33FC73780F2 /* AKMaskFieldBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKMaskFieldBlock.swift; path = AKMaskField/AKMaskFieldBlock.swift; sourceTree = "<group>"; };
 		8F69786DEAF7595ECF37CE4C12C12B5D /* AKMaskFieldEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKMaskFieldEvent.swift; path = AKMaskField/AKMaskFieldEvent.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E6FC2E7E36DB2B8D3D976C979C1BEFF /* AKMaskField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKMaskField.debug.xcconfig; sourceTree = "<group>"; };
 		A849C06E047F611BF884882F4BDD1693 /* Pods-contacts-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-contacts-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AKMaskField; path = AKMaskField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKMaskField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9097CC53A6186136C61A0742E4EE50 /* AKMaskField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AKMaskField.modulemap; sourceTree = "<group>"; };
 		C2EF406BBD67313DE548F0B39EAD5ED9 /* AKMaskField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKMaskField.release.xcconfig; sourceTree = "<group>"; };
 		C3A8AE02A8CA76DF84458F5672C46B70 /* AKMaskFieldPatternCharacter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AKMaskFieldPatternCharacter.swift; path = AKMaskField/AKMaskFieldPatternCharacter.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		922FA0B2114CE51D9F816E933BF93F2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField */,
+				BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField.framework */,
 				46C6E39338FF99692BAAB57B8B936757 /* Pods-contacts */,
 			);
 			name = Products;
@@ -173,7 +173,6 @@
 				06BFCFCBACA8CEC826D5268FC30E65DB /* AKMaskFieldUtility.swift */,
 				192A60293D9794B19076CC787CA61620 /* Support Files */,
 			);
-			name = AKMaskField;
 			path = AKMaskField;
 			sourceTree = "<group>";
 		};
@@ -241,7 +240,7 @@
 			);
 			name = AKMaskField;
 			productName = AKMaskField;
-			productReference = BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField */;
+			productReference = BCAE8A13AC0821E2389BAE1B30A4982C /* AKMaskField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -556,6 +555,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -589,6 +589,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

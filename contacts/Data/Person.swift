@@ -10,13 +10,13 @@ import Foundation
 struct Person: Equatable{
     var firstName: String?
     var secondName : String?
-    var dateOfBirth: Date?
+    var dateOfBirth: String?
     var company: String?
     var email: String?
     var number: String?
     var isFavorite: Bool
     
-    init(firstName: String, secondName: String, dateOfBirth: Date, company: String, email: String, number: String, isFavorite: Bool){
+    init(firstName: String, secondName: String, dateOfBirth: String, company: String, email: String, number: String, isFavorite: Bool){
         self.firstName = firstName
         self.secondName = secondName
         self.dateOfBirth = dateOfBirth
