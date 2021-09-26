@@ -17,6 +17,7 @@ struct Person: Equatable{
     var isFavorite: Bool
     
     init(firstName: String, secondName: String, dateOfBirth: String, company: String, email: String, number: String, isFavorite: Bool){
+        
         self.firstName = firstName
         self.secondName = secondName
         self.dateOfBirth = dateOfBirth
@@ -24,6 +25,7 @@ struct Person: Equatable{
         self.email = email
         self.number = number
         self.isFavorite = isFavorite
+        
     }
     
 }

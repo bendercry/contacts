@@ -16,7 +16,7 @@ class ProfileVC: UIViewController {
     var isFavorite = false
     var isCanEdit = false
     var currentPerson: Person?
-    var copyPerson: Person?
+    
     
     weak var delegate: DataEnteredDelegate? = nil
     private let validation: Validation
@@ -37,11 +37,9 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         updateUI()
-        copyPerson = currentPerson
         birthdayDateField.maskTemplate = "dd/MM/YYYY"
         firstNameField.autocapitalizationType = .sentences
         secondNameField.autocapitalizationType = .sentences
-        // Do any additional setup after loading the view.
     }
     //MARK: @IBAOutlets
     @IBOutlet weak var firstNameLabel: UILabel!
@@ -85,12 +83,15 @@ class ProfileVC: UIViewController {
             let cancelBtn = UIBarButtonItem(image: cancelImage, style: .plain, target: self, action: #selector(cancelEditProfileVC))
             acceptBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             cancelBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
             navigationItem.rightBarButtonItem = acceptBtn
             navigationItem.leftBarButtonItem = cancelBtn
         }
         else{
+            
             let editBtn = UIBarButtonItem(image: editImage, style: .plain, target: self, action: #selector(editProfileVC))
             editBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            
             self.navigationItem.rightBarButtonItem = editBtn
             self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             self.navigationItem.leftBarButtonItem = navigationItem.backBarButtonItem
@@ -115,7 +116,7 @@ class ProfileVC: UIViewController {
             firstNameLabel.text = currentPerson!.firstName
             secondNameLabel.text = currentPerson!.secondName
             companyLabel.text = currentPerson!.company
-            phoneNumberLabel.text = format(with: "+X (XXX) XXX-XX-XX", phone: currentPerson!.number ?? "")
+            phoneNumberLabel.text = currentPerson!.number
             birthdayDateLabel.text = currentPerson!.dateOfBirth
             emailLabel.text = currentPerson!.email
             
@@ -125,6 +126,7 @@ class ProfileVC: UIViewController {
             phoneNumberField.text = currentPerson?.number
             birthdayDateField.text = currentPerson!.dateOfBirth
             emailField.text = currentPerson?.email
+            
             if currentPerson!.isFavorite {
                 favoriteBtn.setImage(UIImage(named: "starFill"), for: .normal)
                 isFavorite = true
@@ -143,7 +145,6 @@ class ProfileVC: UIViewController {
         if validateInfo(){
             isCanEdit = false
             updateUI()
-           
             delegate?.userDidEnterInformation(backPassedPerson: currentPerson!)
         }
     }
@@ -174,23 +175,6 @@ extension ProfileVC{
             present(error)
             return false
         }
-    }
-}
-//MARK: Mask for phone
-extension ProfileVC{
-    func format(with mask: String, phone: String) -> String {
-        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
-        var result = ""
-        var index = numbers.startIndex
-        for ch in mask where index < numbers.endIndex {
-            if ch == "X" {
-                result.append(numbers[index])
-                index = numbers.index(after: index)
-            } else {
-                result.append(ch)
-            }
-        }
-        return result
     }
 }
 //MARK: Alerts setup

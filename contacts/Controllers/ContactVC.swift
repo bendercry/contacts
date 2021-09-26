@@ -66,11 +66,11 @@ class ContactVC: UIViewController, DataEnteredDelegate{
     
     //MARK: Setup UI and example
     func setupExample(){
-        personArray.append(Person(firstName: "Kirill", secondName: "Benderskii", dateOfBirth: "28/08/2000", company: "ISTU", email: "example@mail.ru", number: "+79641840310",isFavorite: true))
-        personArray.append(Person(firstName: "Peter", secondName: "Parker", dateOfBirth: "28/09/2000", company: "Daily Bugle", email: "example@mail.ru", number: "+79641840311",isFavorite: false))
-        personArray.append(Person(firstName: "Mary", secondName: "Jane", dateOfBirth: "28/10/2000", company: "Cafe", email: "example@mail.ru", number: "+79641840312",isFavorite: true))
-        personArray.append(Person(firstName: "Otto", secondName: "Octavius", dateOfBirth: "28/11/2000", company: "Oscorp", email: "example@mail.ru", number: "+79641840313",isFavorite: true))
-        personArray.append(Person(firstName: "Harry", secondName: "Osborn", dateOfBirth: "28/12/2000", company: "Oscorp", email: "example@mail.ru", number: "+79641840314",isFavorite: false))
+        personArray.append(Person(firstName: "Kirill", secondName: "Benderskii", dateOfBirth: "28/08/2000", company: "ISTU", email: "example@mail.ru", number: "+7 (964) 184-03-10",isFavorite: true))
+        personArray.append(Person(firstName: "Peter", secondName: "Parker", dateOfBirth: "28/09/2000", company: "Daily Bugle", email: "example@mail.ru", number: "+7 (964) 184-03-10",isFavorite: false))
+        personArray.append(Person(firstName: "Mary", secondName: "Jane", dateOfBirth: "28/10/2000", company: "Cafe", email: "example@mail.ru", number: "+7 (964) 184-03-10",isFavorite: true))
+        personArray.append(Person(firstName: "Otto", secondName: "Octavius", dateOfBirth: "28/11/2000", company: "Oscorp", email: "example@mail.ru", number: "+7 (964) 184-03-10",isFavorite: true))
+        personArray.append(Person(firstName: "Harry", secondName: "Osborn", dateOfBirth: "28/12/2000", company: "Oscorp", email: "example@mail.ru", number: "+7 (964) 184-03-10",isFavorite: false))
     }
     
     func setupNavBar(){
