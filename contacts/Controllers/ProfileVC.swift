@@ -113,18 +113,18 @@ class ProfileVC: UIViewController {
             
         }
         else {
-            firstNameLabel.text = currentPerson!.firstName
-            secondNameLabel.text = currentPerson!.secondName
-            companyLabel.text = currentPerson!.company
-            phoneNumberLabel.text = currentPerson!.number
-            birthdayDateLabel.text = currentPerson!.dateOfBirth
-            emailLabel.text = currentPerson!.email
+            firstNameLabel.text = currentPerson?.firstName
+            secondNameLabel.text = currentPerson?.secondName
+            companyLabel.text = currentPerson?.company
+            phoneNumberLabel.text = currentPerson?.number
+            birthdayDateLabel.text = currentPerson?.dateOfBirth
+            emailLabel.text = currentPerson?.email
             
-            firstNameField.text = currentPerson!.firstName
-            secondNameField.text = currentPerson!.secondName
-            companyField.text = currentPerson!.company
+            firstNameField.text = currentPerson?.firstName
+            secondNameField.text = currentPerson?.secondName
+            companyField.text = currentPerson?.company
             phoneNumberField.text = currentPerson?.number
-            birthdayDateField.text = currentPerson!.dateOfBirth
+            birthdayDateField.text = currentPerson?.dateOfBirth
             emailField.text = currentPerson?.email
             
             if currentPerson!.isFavorite {

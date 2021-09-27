@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,6 @@
 				61F7C20D2EB5ADA8630AEE6B /* Pods-contacts.debug.xcconfig */,
 				11EDDD04FF5A8454327C85E6 /* Pods-contacts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -121,11 +120,11 @@
 			children = (
 				4667FF5C26FC901F00D59AFC /* Main */,
 				4667FF5F26FC90E200D59AFC /* Cells */,
-				4667FF5E26FC904000D59AFC /* Data */,
 				4667FF5D26FC902F00D59AFC /* Controllers */,
+				4667FF5E26FC904000D59AFC /* Data */,
 				466C0D2D26F9CB2E00076028 /* Main.storyboard */,
-				466C0D3026F9CB2F00076028 /* Assets.xcassets */,
 				466C0D3226F9CB2F00076028 /* LaunchScreen.storyboard */,
+				466C0D3026F9CB2F00076028 /* Assets.xcassets */,
 				466C0D3526F9CB2F00076028 /* Info.plist */,
 			);
 			path = contacts;
